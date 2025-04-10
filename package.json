@@ -1,0 +1,36 @@
+{
+  "name": "assignment-2--intro-to-internet-programming--cs-275--spring-2025",
+  "version": "1.0.0",
+  "description": "☞ **Plagiarism in any form will result in failing the entire course. You’ve been duly warned.** ☜",
+  "homepage": "https://github.com/manny239/assignment-3--intro-to-internet-programming--cs-275--spring-2025#readme",
+  "bugs": {
+    "url": "https://github.com/manny239/assignment-3--intro-to-internet-programming--cs-275--spring-2025/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manny239/assignment-3--intro-to-internet-programming--cs-275--spring-2025.git"
+  },
+  "license": "ISC",
+  "author": "Emmanuel Kurinaah",
+  "type": "commonjs",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "del": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-html": "^6.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.86.3"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0"
+  }
+}
