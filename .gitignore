@@ -1,15 +1,5 @@
 *
 
 !.gitignore
-!.babelrc
-!.editorconfig
-!.eslintrc
-!.stylelintrc.json
-!README.md
-!index.html
-!gulpfile.js
-!package.json
-!package-lock.json
-
-!styles/
-!scripts/
+!reset.css
+!main.css
