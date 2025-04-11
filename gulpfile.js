@@ -6,7 +6,6 @@ const { src, dest, series, watch } = require(`gulp`),
     htmlValidator = require(`gulp-html`),
     jsCompressor = require(`gulp-uglify`),
     jsLinter = require(`gulp-eslint`),
-    sass = require(`gulp-sass`)(require(`sass`)),
     browserSync = require(`browser-sync`),
     reload = browserSync.reload;
 
@@ -55,15 +54,11 @@ async function allBrowsers () {
 
 let validateHTML = () => {
     return src([`dev/html/*.html`, `dev/html/**/*.html`])
-        .pipe(htmlValidator(undefined));
+        .pipe(htmlValidator());
 };
 
 let compileCSSForDev = () => {
-    return src(`dev/styles/scss/main.scss`)
-        .pipe(sass.sync({
-            style: `expanded`,
-            precision: 10
-        }).on(`error`, sass.logError))
+    return src(`dev/styles/css/main.css`)
         .pipe(dest(`temp/styles`));
 };
 
@@ -86,11 +81,7 @@ let compressHTML = () => {
 };
 
 let compileCSSForProd = () => {
-    return src(`dev/styles/scss/main.scss`)
-        .pipe(sass.sync({
-            style: `compressed`,
-            precision: 10
-        }).on(`error`, sass.logError))
+    return src(`dev/styles/css/main.css`)
         .pipe(dest(`prod/styles`));
 };
 
@@ -133,8 +124,9 @@ let serve = () => {
     watch(`dev/scripts/*.js`, series(lintJS, transpileJSForDev))
         .on(`change`, reload);
 
-    watch(`dev/styles/scss/**/*.scss`, compileCSSForDev)
+    watch(`dev/styles/css/**/*.css`, compileCSSForDev)
         .on(`change`, reload);
+
 
     watch(`dev/html/**/*.html`, validateHTML)
         .on(`change`, reload);
