@@ -1,13 +1,6 @@
 !.gitignore
 !reset.css
-!.eslintrc
-!.stylelintrc.json
-!gulpfile.js
-!.babelrc
-!.editorconfig
 !main.css
-!package.json
-!package-lock.json
 
-!node_modules/
-!prod/
+
+
