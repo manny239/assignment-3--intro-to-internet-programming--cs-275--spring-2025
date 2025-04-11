@@ -1,5 +1,7 @@
 *
 
+!dev/
+!dev/**
 !.gitignore
 !reset.css
 !main.css
